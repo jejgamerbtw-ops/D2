@@ -1,0 +1,25 @@
+{
+  "name": "d2",
+  "version": "1.0.0",
+  "description": "[![CI](https://github.com/jejgamerbtw-ops/D2/actions/workflows/ci.yml/badge.svg)](https://github.com/jejgamerbtw-ops/D2/actions/workflows/ci.yml)",
+  "main": "index.js",
+  "scripts": {
+    "qa:tables": "node scripts/sum-js-tables.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jejgamerbtw-ops/D2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/jejgamerbtw-ops/D2/issues"
+  },
+  "homepage": "https://github.com/jejgamerbtw-ops/D2#readme",
+  "dependencies": {
+    "playwright": "^1.58.2"
+  }
+}

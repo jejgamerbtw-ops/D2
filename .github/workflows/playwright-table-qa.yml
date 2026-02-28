@@ -1,0 +1,33 @@
+name: Playwright Table QA
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/playwright-table-qa.yml"
+      - "scripts/sum-js-tables.js"
+      - "package.json"
+      - "package-lock.json"
+
+jobs:
+  qa:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Run DataDash QA 24f2005139@ds.study.iitm.ac.in
+        run: npm run qa:tables
